@@ -65,9 +65,11 @@ public class Zoo {
         System.out.println("information about food:" +food);
         int priceFoodPerDay = animals.stream().mapToInt(Animal::priceFoodPerDay).sum();
         System.out.println("price food for all animals per day = " + priceFoodPerDay);
+        int priceCleaningPerDay = animals.stream().mapToInt(Animal::getCleaningPricePerDay).sum();
+        System.out.println("price cleaning all animals  per day = " + priceCleaningPerDay);
         int priceCagesPerDay = cages.stream().mapToInt(Cage::getPricePerDay).sum();
         System.out.println("price all cages  per day = " + priceCagesPerDay);
-        System.out.println("Full price per day = " + (priceFoodPerDay + priceCagesPerDay));
+        System.out.println("Full price per day = " + (priceFoodPerDay + priceCagesPerDay + priceCleaningPerDay));
     }
 
     public void addAnimal(Animal newAnimal){

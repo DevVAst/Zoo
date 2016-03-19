@@ -28,6 +28,10 @@ public class Animal {
 
     }
 
+    public int getCleaningPricePerDay() {
+        return cleaningPricePerDay;
+    }
+
     public AnimalType getType() {
         return type;
     }
